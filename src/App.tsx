@@ -19,11 +19,12 @@ export default function App() {
 					<Marker />
 				</div>
 			</div>
-			<div className="border-4 grid grid-cols-7 overflow-hidden w-full max-w-lg aspect-square rounded-3xl shadow-[0px_6px]">
+			<div className="border-4 grid grid-cols-7 overflow-hidden w-full max-w-lg rounded-3xl shadow-[0px_6px]">
 				{Array.from({ length: 7 }, (_, i) => (
 					<Columns
 						key={`column-${i}`}
 						startIndex={i * 7}
+						playerPicks={playerPicks}
 						setPlayerPicks={setPlayerPicks}
 						onHover={() => {
 							setHovered(i);
